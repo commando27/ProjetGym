@@ -12,7 +12,7 @@ const LoginScreen = ({ navigation }) => {
             const parsedUsers = JSON.parse(users);
             const user = parsedUsers.find(u => u.email === email && u.password === password);
             if (user) {
-                navigation.navigate('StoreListScreen');
+                navigation.navigate('ListExercice');
             } else {
                 alert('Email ou mot de passe invalide');
             }
@@ -31,7 +31,7 @@ const LoginScreen = ({ navigation }) => {
                 const newUser = { email, password };
                 parsedUsers.push(newUser);
                 await SecureStore.setItemAsync('users', JSON.stringify(parsedUsers));
-                navigation.navigate('StoreListScreen');
+                navigation.navigate('ListExercice');
             }
         } catch (error) {
             console.log(error);

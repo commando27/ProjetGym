@@ -2,8 +2,12 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import HeaderTitle from '../HeaderTitle';
-import LoginScreen from '../Login';
+import HeaderTitle from './HeaderTitle';
+import LoginScreen from './Login';
+import ListExercice from './ListExercice';
+import ListGym from './ListGym';
+import Parametre from './parametre';
+import Localisation from './localisation';
 
 const Stack = createNativeStackNavigator();
 
@@ -27,12 +31,12 @@ function App() {
         />
         <Stack.Screen
           name="ListGym"
-          component={StoreDetailsScreen}
+          component={ListGym}
           options={{ headerTitle: props => <HeaderTitle {...props} /> }}
         />
         <Stack.Screen
           name="localisation"
-          component={StoreDetailsScreen}
+          component={Localisation}
           options={{ headerTitle: props => <HeaderTitle {...props} /> }}
         />
         <Stack.Screen
