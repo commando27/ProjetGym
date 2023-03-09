@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "address": "5524 St-Patrick",
+        "banner": "Provigo",
+        "city": "Laval",
+        "lastVisit": "2022-01-10",
+        "latitude": 45.561402711160845,
+        "longitude": -73.71787447482347
+    },
+    {
+        "id": 2,
+        "address": "7899 St-Denis",
+        "banner": "IGA",
+        "city": "Montréal",
+        "lastVisit": "2022-02-10",
+        "latitude": 45.5351590319082,
+        "longitude": -73.61318785697222
+    },
+    {
+        "id": 3,
+        "address": "76 St-Hubert",
+        "banner": "Métro",
+        "city": "Montréal",
+        "lastVisit": "2022-02-01",
+        "latitude": 45.53682363367969,
+        "longitude": -73.59402012079953
+    },
+    {
+        "id": 4,
+        "address": "45 St-Laurent",
+        "banner": "Provigo",
+        "city": "Montréal",
+        "lastVisit": "2022-01-15",
+        "latitude": 45.52578486341499,
+        "longitude": -73.5949756577611
+    },
+    {
+        "id": 5,
+        "address": "8 Boul Samson",
+        "banner": "IGA",
+        "city": "Laval",
+        "lastVisit": "2022-01-19",
+        "latitude": 45.54630984277687,
+        "longitude": -73.77160046249628
+    },
+    {
+        "id": 6,
+        "address": "2233 Boul Charland",
+        "banner": "Métro",
+        "city": "Longueuil",
+        "lastVisit": "2022-02-03",
+        "latitude": 45.52648671185403,
+        "longitude": -73.50574996322393
+    },
+    {
+        "id": 7,
+        "address": "445 Jean-Talon",
+        "banner": "Métro",
+        "city": "Montréal",
+        "lastVisit": "2022-01-30",
+        "latitude": 45.542708291649475,
+        "longitude": -73.61168749630451
+    },
+    {
+        "id": 8,
+        "address": "55 Cartier",
+        "banner": "Provigo",
+        "city": "Laval",
+        "lastVisit": "2022-01-25",
+        "latitude": 45.54973107915169,
+        "longitude": -73.7657368183136
+    },
+    {
+        "id": 9,
+        "address": "45 Boul. Crémazie",
+        "banner": "Maxi",
+        "city": "montréal",
+        "lastVisit": "2022-01-17",
+        "latitude": 45.563572621822836,
+        "longitude": -73.60674150288105
+    },
+    {
+        "id": 10,
+        "address": "552 St-Martin",
+        "banner": "IGA",
+        "city": "Laval",
+        "lastVisit": "2022-02-04",
+        "latitude": 45.56221021691429,
+        "longitude": -73.72261729091406
+    }
+]
