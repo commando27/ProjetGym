@@ -5,9 +5,9 @@ import { View, Text, TouchableOpacity, Image } from 'react-native';
 const HeaderTitle = ({ navigation }) => {
 
     const handleNavigation = () => {
-        if (navigation) {
-            navigation.navigate('parametre');
-        }
+
+        navigation.navigate('parametre');
+
     };
 
     return (

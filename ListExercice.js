@@ -21,7 +21,7 @@ const ListExercice = ({ navigation }) => {
     }, []);
 
     const loadData = () => {
-        axios.get('')
+        axios.get('https://my-json-server.typicode.com/commando27/ProjetGym/posts')
             .then(response => {
                 setExercices(response.data);
                 db.transaction(tx => {
@@ -47,14 +47,14 @@ const ListExercice = ({ navigation }) => {
     };
 
     // Fonction pour afficher la carte de la ville sélectionnée
-    function handlePress(exo) {
-        navigation.navigate('ListGym', { exo });
+    function handlePress(gym) {
+        navigation.navigate('ListGym', { gym });
     }
 
     // Composant pour afficher chaque élément de la liste
     function ExoItem({ exo }) {
         return (
-            <TouchableOpacity style={styles.exo} onPress={() => handlePress(exo)}>
+            <TouchableOpacity style={styles.exo} onPress={() => handlePress(exo.listGym)}>
                 <Text style={styles.exoTitle}>{exo.nom}</Text>
                 <Text style={styles.exoDescription}>{exo.description}</Text>
             </TouchableOpacity >

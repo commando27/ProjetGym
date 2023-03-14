@@ -34,7 +34,6 @@ function App() {
         <Stack.Screen
           name="localisation"
           component={Localisation}
-          options={{ headerTitle: props => <HeaderTitle {...props} /> }}
         />
         <Stack.Screen
           name="parametre"
