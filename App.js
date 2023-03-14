@@ -2,14 +2,27 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import HeaderTitle from './HeaderTitle';
 import LoginScreen from './Login';
 import ListExercice from './ListExercice';
 import ListGym from './ListGym';
 import Parametre from './parametre';
 import Localisation from './localisation';
+import {
+  createDrawerNavigator,
+} from '@react-navigation/drawer';
 
 const Stack = createNativeStackNavigator();
+const Drawer = createDrawerNavigator();
+
+
+function MyDrawer() {
+  return (
+    <Drawer.Navigator useLegacyImplementation>
+      <Drawer.Screen name="Exercices" component={ListExercice} />
+      <Drawer.Screen name="parametre" component={Parametre} />
+    </Drawer.Navigator>
+  );
+}
 
 function App() {
   return (
@@ -21,15 +34,11 @@ function App() {
         />
         <Stack.Screen
           name="ListExercice"
-          component={ListExercice}
-          options={{
-            headerTitle: props => <HeaderTitle {...props} />,
-          }}
+          component={MyDrawer}
         />
         <Stack.Screen
           name="ListGym"
           component={ListGym}
-          options={{ headerTitle: props => <HeaderTitle {...props} /> }}
         />
         <Stack.Screen
           name="localisation"

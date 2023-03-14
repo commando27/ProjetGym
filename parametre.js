@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
-import * as SecureStore from 'expo-secure-store';
+import React, { useState, useEffect } from 'react';
+import { Text, View, Switch } from 'react-native';
+import LoginScreen from './Login';
+import ListExercice from './ListExercice';
 
-const Parametre = ({ navigation }) => {
+
+const Parametre = ({ }) => {
+
 
 
     return (
-        <View >
+        <View>
 
         </View>
     );
