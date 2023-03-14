@@ -2,93 +2,69 @@
     "posts": [
         {
             "id": 1,
-            "address": "5524 St-Patrick",
-            "banner": "Provigo",
-            "city": "Laval",
-            "lastVisit": "2022-01-10",
-            "latitude": 45.561402711160845,
-            "longitude": -73.71787447482347
+            "nom": "écarté à la poulie basse",
+            "description": "Assis sur la machine, bras écartés en position horizontale, bras tendus ou légèrement fléchis.Inspirer et resserrer les bras au maximum. Contractez intensément vos pectoraux en expirant. Relâchez la position lentement et inspirant à nouveau.",
+            "listGym": [
+                {
+                    "nom": "Milesfit",
+                    "latitude": 45.516129,
+                    "longitude": -73.572424
+                },
+                {
+                    "nom": "CrossFit Montreal",
+                    "latitude": 45.469435,
+                    "longitude": -73.587259
+                },
+                {
+                    "nom": "Mansfield Athletics Club",
+                    "latitude": 45.50089321541358,
+                    "longitude": -73.57085653136349
+                }
+            ]
         },
         {
             "id": 2,
-            "address": "7899 St-Denis",
-            "banner": "IGA",
-            "city": "Montréal",
-            "lastVisit": "2022-02-10",
-            "latitude": 45.5351590319082,
-            "longitude": -73.61318785697222
+            "nom": "Développé incliné haltère chaise incliné 20 degrée",
+            "description": "verrouiller les omoplate, gonflé les pecs, rentrer le nombril, appuyer un maximum sur mes talons ",
+            "listGym": [
+                {
+                    "nom": "Victoria Park",
+                    "latitude": 45.530565,
+                    "longitude": -73.611688
+                },
+                {
+                    "nom": "Crossfit Waverly",
+                    "latitude": 45.530925,
+                    "longitude": -73.612375
+                },
+                {
+                    "nom": "YMCA",
+                    "latitude": 45.525902,
+                    "longitude": -73.711345
+                }
+            ]
         },
         {
             "id": 3,
-            "address": "76 St-Hubert",
-            "banner": "Métro",
-            "city": "Montréal",
-            "lastVisit": "2022-02-01",
-            "latitude": 45.53682363367969,
-            "longitude": -73.59402012079953
-        },
-        {
-            "id": 4,
-            "address": "45 St-Laurent",
-            "banner": "Provigo",
-            "city": "Montréal",
-            "lastVisit": "2022-01-15",
-            "latitude": 45.52578486341499,
-            "longitude": -73.5949756577611
-        },
-        {
-            "id": 5,
-            "address": "8 Boul Samson",
-            "banner": "IGA",
-            "city": "Laval",
-            "lastVisit": "2022-01-19",
-            "latitude": 45.54630984277687,
-            "longitude": -73.77160046249628
-        },
-        {
-            "id": 6,
-            "address": "2233 Boul Charland",
-            "banner": "Métro",
-            "city": "Longueuil",
-            "lastVisit": "2022-02-03",
-            "latitude": 45.52648671185403,
-            "longitude": -73.50574996322393
-        },
-        {
-            "id": 7,
-            "address": "445 Jean-Talon",
-            "banner": "Métro",
-            "city": "Montréal",
-            "lastVisit": "2022-01-30",
-            "latitude": 45.542708291649475,
-            "longitude": -73.61168749630451
-        },
-        {
-            "id": 8,
-            "address": "55 Cartier",
-            "banner": "Provigo",
-            "city": "Laval",
-            "lastVisit": "2022-01-25",
-            "latitude": 45.54973107915169,
-            "longitude": -73.7657368183136
-        },
-        {
-            "id": 9,
-            "address": "45 Boul. Crémazie",
-            "banner": "Maxi",
-            "city": "montréal",
-            "lastVisit": "2022-01-17",
-            "latitude": 45.563572621822836,
-            "longitude": -73.60674150288105
-        },
-        {
-            "id": 10,
-            "address": "552 St-Martin",
-            "banner": "IGA",
-            "city": "Laval",
-            "lastVisit": "2022-02-04",
-            "latitude": 45.56221021691429,
-            "longitude": -73.72261729091406
+            "nom": "écarter à la poulie",
+            "description": "Debout entre deux poulies hautes, les pieds bien stables (un devant, un derrière par exemple), une poignée dans chaque main, le buste penché à 135 degrés, il s’agit à partir d’une position bras écartés (coudes fléchis) de les ramener devant soi (dans l’axe des pectoraux).",
+            "listGym": [
+                {
+                    "nom": "Éconofitness",
+                    "latitude": 45.600122,
+                    "longitude": -73.613751
+                },
+                {
+                    "nom": "X-Fit",
+                    "latitude": 45.519184,
+                    "longitude": -73.576279
+                },
+                {
+                    "nom": "Énergie Cardio",
+                    "latitude": 45.591984,
+                    "longitude": -73.666291
+                }
+            ]
         }
     ]
 }

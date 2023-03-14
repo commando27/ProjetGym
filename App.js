@@ -18,9 +18,6 @@ function App() {
         <Stack.Screen
           name="Login"
           component={LoginScreen}
-          options={{
-            headerTitle: props => <HeaderTitle {...props} />,
-          }}
         />
         <Stack.Screen
           name="ListExercice"
