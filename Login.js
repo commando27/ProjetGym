@@ -1,10 +1,21 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import * as SecureStore from 'expo-secure-store';
+import * as Notifications from 'expo-notifications';
 
 const LoginScreen = ({ navigation }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+
+    const notification = {
+        content: {
+            title: 'Connexion',
+            body: `Vous avez bien été connecté`,
+        },
+        trigger: null,
+    };
+
 
     const handleLogin = async () => {
         try {
@@ -13,6 +24,16 @@ const LoginScreen = ({ navigation }) => {
             const user = parsedUsers.find(u => u.email === email && u.password === password);
             if (user) {
                 navigation.navigate('ListExercice');
+
+                Notifications.setNotificationHandler({
+                    handleNotification: async () => ({
+                        shouldShowAlert: true,
+                        shouldPlaySound: false,
+                        shouldSetBadge: false,
+                    }),
+                });
+                await Notifications.scheduleNotificationAsync(notification);
+
             } else {
                 alert('Email ou mot de passe invalide');
             }
@@ -32,6 +53,14 @@ const LoginScreen = ({ navigation }) => {
                 parsedUsers.push(newUser);
                 await SecureStore.setItemAsync('users', JSON.stringify(parsedUsers));
                 navigation.navigate('ListExercice');
+                Notifications.setNotificationHandler({
+                    handleNotification: async () => ({
+                        shouldShowAlert: true,
+                        shouldPlaySound: false,
+                        shouldSetBadge: false,
+                    }),
+                });
+                await Notifications.scheduleNotificationAsync(notification);
             }
         } catch (error) {
             console.log(error);
