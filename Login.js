@@ -1,19 +1,14 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, useEffect } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Switch } from 'react-native';
 import * as SecureStore from 'expo-secure-store';
 import * as Notifications from 'expo-notifications';
-import { useUserLoggedIn } from './App';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 const LoginScreen = ({ navigation, route }) => {
 
-    const [isUserLoggedIn, setIsUserLoggedIn] = useUserLoggedIn();
-    console.log(isUserLoggedIn);
-
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
-
 
     const notification = {
         content: {
@@ -22,6 +17,15 @@ const LoginScreen = ({ navigation, route }) => {
         },
         trigger: null,
     };
+
+    useEffect(() => {
+        // Load the remember me state from storage
+        AsyncStorage.getItem('rememberMe').then(value => {
+            if (value === 'true') {
+                navigation.replace('ListExercice'); // Navigate to the home screen if the user is already logged in
+            }
+        });
+    }, []);
 
 
     const handleLogin = async () => {
@@ -41,7 +45,7 @@ const LoginScreen = ({ navigation, route }) => {
                 });
                 await Notifications.scheduleNotificationAsync(notification);
 
-                setIsUserLoggedIn(true);
+
             } else {
                 alert('Email ou mot de passe invalide');
             }
@@ -69,7 +73,6 @@ const LoginScreen = ({ navigation, route }) => {
                     }),
                 });
                 await Notifications.scheduleNotificationAsync(notification);
-                setIsUserLoggedIn(true);
 
             }
         } catch (error) {
@@ -100,6 +103,7 @@ const LoginScreen = ({ navigation, route }) => {
             <TouchableOpacity style={styles.button} onPress={handleNewUser}>
                 <Text style={styles.buttonText}>Nouvel utilisateur</Text>
             </TouchableOpacity>
+
         </View>
     );
 };

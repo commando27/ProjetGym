@@ -14,11 +14,6 @@ import {
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
 
-export const useUserLoggedIn = () => {
-  const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
-  return [isUserLoggedIn, setIsUserLoggedIn];
-}
-
 function MyDrawer() {
   return (
 
