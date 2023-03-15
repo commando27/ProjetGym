@@ -1,5 +1,5 @@
 // App.jsx
-import * as React from 'react';
+import React, { useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginScreen from './Login';
@@ -15,6 +15,7 @@ const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
 
 
+
 function MyDrawer() {
   return (
     <Drawer.Navigator useLegacyImplementation>
@@ -25,12 +26,25 @@ function MyDrawer() {
 }
 
 function App() {
+
+  // const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
+
+  // const getIsUserLoggedIn = () => {
+  //   return isUserLoggedIn;
+  // };
+
+  const setIsUserLoggedIn = false;
+
+  function getUserLoggedIn() {
+    return setIsUserLoggedIn;
+  }
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen
           name="Login"
           component={LoginScreen}
+          initialParams={{ setIsUserLoggedIn }}
         />
         <Stack.Screen
           name="ListExercice"
@@ -47,6 +61,7 @@ function App() {
         <Stack.Screen
           name="parametre"
           component={Parametre}
+          initialParams={{ getUserLoggedIn }}
         />
       </Stack.Navigator>
     </NavigationContainer>
