@@ -14,10 +14,14 @@ import {
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
 
-
+export const useUserLoggedIn = () => {
+  const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
+  return [isUserLoggedIn, setIsUserLoggedIn];
+}
 
 function MyDrawer() {
   return (
+
     <Drawer.Navigator useLegacyImplementation>
       <Drawer.Screen name="Exercices" component={ListExercice} />
       <Drawer.Screen name="parametre" component={Parametre} />
@@ -27,24 +31,13 @@ function MyDrawer() {
 
 function App() {
 
-  // const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
-
-  // const getIsUserLoggedIn = () => {
-  //   return isUserLoggedIn;
-  // };
-
-  const setIsUserLoggedIn = false;
-
-  function getUserLoggedIn() {
-    return setIsUserLoggedIn;
-  }
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen
           name="Login"
           component={LoginScreen}
-          initialParams={{ setIsUserLoggedIn }}
+
         />
         <Stack.Screen
           name="ListExercice"
@@ -61,7 +54,7 @@ function App() {
         <Stack.Screen
           name="parametre"
           component={Parametre}
-          initialParams={{ getUserLoggedIn }}
+
         />
       </Stack.Navigator>
     </NavigationContainer>

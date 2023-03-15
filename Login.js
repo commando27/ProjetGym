@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, useEffect } from 'react-native';
 import * as SecureStore from 'expo-secure-store';
 import * as Notifications from 'expo-notifications';
-
+import { useUserLoggedIn } from './App';
 
 
 const LoginScreen = ({ navigation, route }) => {
 
-    const { setIsUserLoggedIn } = route.params;
+    const [isUserLoggedIn, setIsUserLoggedIn] = useUserLoggedIn();
+    console.log(isUserLoggedIn);
 
-    console.log(setIsUserLoggedIn);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -41,12 +41,7 @@ const LoginScreen = ({ navigation, route }) => {
                 });
                 await Notifications.scheduleNotificationAsync(notification);
 
-                navigation.setParams({
-                    setIsUserLoggedIn: true,
-                })
-
-
-
+                setIsUserLoggedIn(true);
             } else {
                 alert('Email ou mot de passe invalide');
             }
@@ -74,7 +69,7 @@ const LoginScreen = ({ navigation, route }) => {
                     }),
                 });
                 await Notifications.scheduleNotificationAsync(notification);
-
+                setIsUserLoggedIn(true);
 
             }
         } catch (error) {

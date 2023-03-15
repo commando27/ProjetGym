@@ -2,16 +2,17 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Text, View, Switch, StyleSheet } from 'react-native';
 import LoginScreen from './Login';
 import ListExercice from './ListExercice';
+import { useUserLoggedIn } from './App';
 
 
 
-const Parametre = ({ route }) => {
+const Parametre = ({ }) => {
 
-    const { getUserLoggedIn } = route.params;
-    console.log(getUserLoggedIn);
+    const [isUserLoggedIn, setIsUserLoggedIn] = useUserLoggedIn();
+    console.log(isUserLoggedIn);
 
-    const [isEnabled, setIsEnabled] = useState(false);
-    const toggleSwitch = () => setIsEnabled(previousState => !previousState);
+    //const [isEnabled, setIsEnabled] = useState(false);
+    const toggleSwitch = () => setIsUserLoggedIn(previousState => !previousState);
 
 
     return (
@@ -19,10 +20,10 @@ const Parametre = ({ route }) => {
             <Text style={{ marginRight: 10 }}>Rester connecté :</Text>
             <Switch
                 trackColor={{ false: '#767577', true: '#81b0ff' }}
-                thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'}
+                thumbColor={isUserLoggedIn ? '#f5dd4b' : '#f4f3f4'}
                 ios_backgroundColor="#3e3e3e"
                 onValueChange={toggleSwitch}
-                value={isEnabled}
+                value={isUserLoggedIn}
             />
 
         </View>
