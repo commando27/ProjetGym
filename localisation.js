@@ -5,6 +5,7 @@ import MapView, { Marker } from 'react-native-maps';
 const Localisation = ({ route, navigation }) => {
     const { gym } = route.params;
 
+    // l'entete de page
     function LogoTitle() {
         return (
             <Text style={styles.gymName}>{gym.nom}</Text>

@@ -14,6 +14,7 @@ const ListExercice = ({ navigation }) => {
     const [text, setText] = useState('');
     const [searchResults, setSearchResults] = useState([]);
 
+    //fonction qui permet de rechercher et retoune une liste d'exercices
     const handleSearch = () => {
         const results = exercices.filter((exercise) =>
             exercise.nom.toLowerCase().includes(text.toLowerCase())
@@ -25,7 +26,7 @@ const ListExercice = ({ navigation }) => {
         }
 
     }
-
+    // l'entete de page
     function LogoTitle() {
         AsyncStorage.getItem('Courriel').then(email => {
             setInfoClient(email);

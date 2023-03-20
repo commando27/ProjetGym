@@ -27,7 +27,7 @@
         },
         {
             "id": 2,
-            "nom": "Développé incliné haltère chaise incliné 20 degrée",
+            "nom": "Développé incliné haltère chaise incliné 20 degré",
             "description": "verrouiller les omoplate, gonflé les pecs, rentrer le nombril, appuyer un maximum sur mes talons ",
             "listGym": [
                 {
@@ -77,7 +77,7 @@
         },
         {
             "id": 4,
-            "nom": "écarté à la poulie basse",
+            "nom": "dévellopé avec inclinaison a 10 degré",
             "description": "Assis sur la machine, bras écartés en position horizontale, bras tendus ou légèrement fléchis.Inspirer et resserrer les bras au maximum. Contractez intensément vos pectoraux en expirant. Relâchez la position lentement et inspirant à nouveau.",
             "listGym": [
                 {
@@ -102,7 +102,7 @@
         },
         {
             "id": 5,
-            "nom": "Développé incliné haltère chaise incliné 20 degrée",
+            "nom": "push up",
             "description": "verrouiller les omoplate, gonflé les pecs, rentrer le nombril, appuyer un maximum sur mes talons ",
             "listGym": [
                 {
@@ -127,8 +127,8 @@
         },
         {
             "id": 6,
-            "nom": "écarter à la poulie",
-            "description": "Debout entre deux poulies hautes, les pieds bien stables (un devant, un derrière par exemple), une poignée dans chaque main, le buste penché à 135 degrés, il s’agit à partir d’une position bras écartés (coudes fléchis) de les ramener devant soi (dans l’axe des pectoraux).",
+            "nom": "redressement assis",
+            "description": "Le redressement assis s'exécute en position couché sur le dos avec les genoux fléchis. Il est important d'initier le mouvement par une contraction des abdominaux comme pour tenter de les raccourcir, ce qui entraine la flexion progressive du tronc.",
             "listGym": [
                 {
                     "id": 16,

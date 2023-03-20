@@ -21,16 +21,15 @@ const LoginScreen = ({ navigation }) => {
     };
 
     useEffect(() => {
-        // Load the remember me state from storage
+        //regarder si l'utilisateur veut qu'on ce souvienne de lui
         AsyncStorage.getItem('rememberMe').then(value => {
             if (value === 'true') {
-                navigation.replace('ListExercice'); // Navigate to the home screen if the user is already logged in
-
+                navigation.replace('ListExercice');
             }
         });
     }, []);
 
-
+    //fonction permettant de se connecter avec le bouton connexion 
     const handleLogin = async () => {
         try {
             const users = await SecureStore.getItemAsync('users');
@@ -56,7 +55,7 @@ const LoginScreen = ({ navigation }) => {
             console.log(error);
         }
     };
-
+    //fonction permettant de s'inscrire
     const handleNewUser = async () => {
         try {
             const users = await SecureStore.getItemAsync('users');

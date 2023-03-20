@@ -6,7 +6,7 @@ const Parametre = ({ }) => {
     const [rememberMe, setRememberMe] = useState(false);
 
     useEffect(() => {
-        // Load the remember me state from storage
+        //regarder si l'utilisateur veut qu'on ce souvienne de lui
         AsyncStorage.getItem('rememberMe').then(value => {
             setRememberMe(value === 'true');
         });
@@ -18,7 +18,7 @@ const Parametre = ({ }) => {
     }, []);
 
     const handleRememberMeSwitch = value => {
-        // Store the remember me state in storage
+        //  changer l'état (ce souvenir de moi)
         AsyncStorage.setItem('rememberMe', value.toString());
         setRememberMe(value);
     };
