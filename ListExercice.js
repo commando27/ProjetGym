@@ -103,7 +103,7 @@ const ListExercice = ({ navigation }) => {
                     style={styles.searchInput}
                     onChangeText={setText}
                     value={text}
-                    placeholder="Search"
+                    placeholder="Recherche par nom"
                     onSubmitEditing={handleSearch}
                 />
             </View>
