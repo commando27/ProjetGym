@@ -74,6 +74,81 @@
                     "longitude": -73.666291
                 }
             ]
+        },
+        {
+            "id": 4,
+            "nom": "écarté à la poulie basse",
+            "description": "Assis sur la machine, bras écartés en position horizontale, bras tendus ou légèrement fléchis.Inspirer et resserrer les bras au maximum. Contractez intensément vos pectoraux en expirant. Relâchez la position lentement et inspirant à nouveau.",
+            "listGym": [
+                {
+                    "id": 10,
+                    "nom": "Milesfit",
+                    "latitude": 45.516129,
+                    "longitude": -73.572424
+                },
+                {
+                    "id": 11,
+                    "nom": "CrossFit Montreal",
+                    "latitude": 45.469435,
+                    "longitude": -73.587259
+                },
+                {
+                    "id": 12,
+                    "nom": "Mansfield Athletics Club",
+                    "latitude": 45.50089321541358,
+                    "longitude": -73.57085653136349
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "nom": "Développé incliné haltère chaise incliné 20 degrée",
+            "description": "verrouiller les omoplate, gonflé les pecs, rentrer le nombril, appuyer un maximum sur mes talons ",
+            "listGym": [
+                {
+                    "id": 13,
+                    "nom": "Victoria Park",
+                    "latitude": 45.530565,
+                    "longitude": -73.611688
+                },
+                {
+                    "id": 14,
+                    "nom": "Crossfit Waverly",
+                    "latitude": 45.530925,
+                    "longitude": -73.612375
+                },
+                {
+                    "id": 15,
+                    "nom": "YMCA",
+                    "latitude": 45.525902,
+                    "longitude": -73.711345
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "nom": "écarter à la poulie",
+            "description": "Debout entre deux poulies hautes, les pieds bien stables (un devant, un derrière par exemple), une poignée dans chaque main, le buste penché à 135 degrés, il s’agit à partir d’une position bras écartés (coudes fléchis) de les ramener devant soi (dans l’axe des pectoraux).",
+            "listGym": [
+                {
+                    "id": 16,
+                    "nom": "Éconofitness",
+                    "latitude": 45.600122,
+                    "longitude": -73.613751
+                },
+                {
+                    "id": 17,
+                    "nom": "X-Fit",
+                    "latitude": 45.519184,
+                    "longitude": -73.576279
+                },
+                {
+                    "id": 18,
+                    "nom": "Énergie Cardio",
+                    "latitude": 45.591984,
+                    "longitude": -73.666291
+                }
+            ]
         }
     ]
 }

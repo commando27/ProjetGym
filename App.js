@@ -5,8 +5,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginScreen from './Login';
 import ListExercice from './ListExercice';
 import ListGym from './ListGym';
-import Parametre from './parametre';
-import Localisation from './localisation';
+import Parametre from './Parametre';
+import Localisation from './Localisation';
 import {
   createDrawerNavigator,
 } from '@react-navigation/drawer';

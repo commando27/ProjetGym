@@ -5,11 +5,13 @@ import * as Notifications from 'expo-notifications';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
-const LoginScreen = ({ navigation, route }) => {
+const LoginScreen = ({ navigation }) => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+
+    // constante pour afficher les notification
     const notification = {
         content: {
             title: 'Connexion',
@@ -23,6 +25,7 @@ const LoginScreen = ({ navigation, route }) => {
         AsyncStorage.getItem('rememberMe').then(value => {
             if (value === 'true') {
                 navigation.replace('ListExercice'); // Navigate to the home screen if the user is already logged in
+
             }
         });
     }, []);
@@ -44,7 +47,7 @@ const LoginScreen = ({ navigation, route }) => {
                     }),
                 });
                 await Notifications.scheduleNotificationAsync(notification);
-
+                AsyncStorage.setItem('Courriel', email);
 
             } else {
                 alert('Email ou mot de passe invalide');
@@ -73,6 +76,7 @@ const LoginScreen = ({ navigation, route }) => {
                     }),
                 });
                 await Notifications.scheduleNotificationAsync(notification);
+                AsyncStorage.setItem('Courriel', email);
 
             }
         } catch (error) {

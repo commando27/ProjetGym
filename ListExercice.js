@@ -1,13 +1,46 @@
-import React, { useState, useEffect } from 'react';
-import { Text, View, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
+import { Text, View, FlatList, TouchableOpacity, StyleSheet, TextInput } from 'react-native';
 import * as SQLite from 'expo-sqlite';
 import axios from 'axios';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const db = SQLite.openDatabase('mydb.db');
 
 const ListExercice = ({ navigation }) => {
 
+
     const [exercices, setExercices] = useState([]);
+    const [infoClient, setInfoClient] = useState('');
+    const [text, setText] = useState('');
+    const [searchResults, setSearchResults] = useState([]);
+
+    const handleSearch = () => {
+        const results = exercices.filter((exercise) =>
+            exercise.nom.toLowerCase().includes(text.toLowerCase())
+        );
+        if (results.length === 0) {
+            setSearchResults(exercices);
+        } else {
+            setSearchResults(results);
+        }
+
+    }
+
+    function LogoTitle() {
+        AsyncStorage.getItem('Courriel').then(email => {
+            setInfoClient(email);
+            console.log(infoClient);
+        });
+        return (
+            <Text>{infoClient}</Text>
+        );
+    };
+
+    useLayoutEffect(() => {
+        navigation.setOptions({
+            headerTitle: () => <LogoTitle />,
+        });
+    }, [navigation]);
 
     // Charger les données si elles ne l'ont pas été
     useEffect(() => {
@@ -63,8 +96,20 @@ const ListExercice = ({ navigation }) => {
 
     return (
         <View>
+
+            <View style={styles.container}>
+                <TextInput
+                    style={styles.searchInput}
+                    onChangeText={setText}
+                    value={text}
+                    placeholder="Search"
+                    onSubmitEditing={handleSearch}
+                />
+            </View>
+
+
             <FlatList
-                data={exercices}
+                data={searchResults.length ? searchResults : exercices}
                 keyExtractor={item => item.id.toString()}
                 renderItem={({ item }) => <ExoItem exo={item} />}
                 contentContainerStyle={styles.list}
@@ -91,6 +136,17 @@ const styles = StyleSheet.create({
     exoDescription: {
         fontSize: 16,
         marginBottom: 5,
+    },
+    container: {
+        paddingHorizontal: 16,
+        paddingVertical: 8,
+    },
+    searchInput: {
+        backgroundColor: '#fff',
+        borderRadius: 8,
+        paddingHorizontal: 16,
+        paddingVertical: 8,
+        fontSize: 16,
     },
 });
 
